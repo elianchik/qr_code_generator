@@ -21,7 +21,8 @@ def qr():
    
    buffer = BytesIO()
    img.save(buffer, format="png")
- 
+
+
    img64 = base64.b64encode(buffer.getvalue())
    return f'<img src="data:image/png;base64, {img64.decode()}" alt="qrcode" />'
 
